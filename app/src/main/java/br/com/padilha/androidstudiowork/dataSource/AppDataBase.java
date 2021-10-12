@@ -2,10 +2,12 @@ package br.com.padilha.androidstudiowork.dataSource;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import br.com.padilha.androidstudiowork.dataModel.UsuarioDataModel;
+import br.com.padilha.androidstudiowork.model.Usuario;
 
 public class AppDataBase extends SQLiteOpenHelper {
 
@@ -34,10 +36,24 @@ public class AppDataBase extends SQLiteOpenHelper {
         try {
             retorno = db.insert(tabela, null, dados) > 0;
             return retorno;
-    } catch (Exception e) {
+        } catch (Exception e) {
         }
         return retorno;
 
+    }
+
+    public boolean validateLogin(String name, String email, String pass, String tabela) {
+        db = getWritableDatabase();
+        String SQL = "SELECT * FROM " + tabela + " WHERE nome = ? AND email = ? AND senha = ?";
+        Cursor cursor;
+        cursor = db.rawQuery(SQL, new String[]{
+                name, email, pass
+        });
+        if (cursor.getCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

@@ -25,4 +25,10 @@ public class UsuarioController extends AppDataBase {
         dadoDoObjeto.put(UsuarioDataModel.SENHA, obj.getSenha());
         return insert(UsuarioDataModel.TABELA,dadoDoObjeto);
     }
+
+    public boolean validateLogin(String name, String email, String pass){
+        return validateLogin(name, email, pass, UsuarioDataModel.TABELA);
+
+    }
+
 }

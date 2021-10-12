@@ -15,7 +15,7 @@ public class UsuarioDataModel {
     public static String queryCriarTabela = "";
     public static String createTable(){
         queryCriarTabela += "CREATE TABLE " + TABELA + "(";
-        queryCriarTabela += ID + " integer autoincrement primary key, ";
+        queryCriarTabela += ID + " integer primary key, ";
         queryCriarTabela += NOME + " text, ";
         queryCriarTabela += IDADE + " integer, ";
         queryCriarTabela += EMAIL + " text, ";
