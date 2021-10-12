@@ -11,7 +11,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="108dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,36 +20,35 @@
 
     <EditText
         android:id="@+id/edit_text_name"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:hint="Insira seu nome:"
+        android:layout_marginTop="68dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/nome_de_usuario_home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/edit_text_email"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:hint="Insira seu e-mail:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="36dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/e_mail_home"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_name"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_name" />
 
     <EditText
         android:id="@+id/edit_text_password"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:hint="Insira sua senha:"
+        android:layout_marginTop="36dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/insira_sua_senha_home"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_email"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_email" />
 
     <Button
@@ -57,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
-        android:text="Clique aqui"
+        android:text="@string/clique_aqui_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_password" />
