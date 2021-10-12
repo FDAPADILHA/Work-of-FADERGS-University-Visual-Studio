@@ -3,5 +3,5 @@
     <string name="e_mail_home">E-mail:</string>
     <string name="nome_de_usuario_home">Nome de usuário:</string>
     <string name="insira_sua_senha_home">Insira sua senha:</string>
-    <string name="clique_aqui_home">Clique aqui</string>
+    <string name="clique_aqui_home">Login</string>
 </resources>
