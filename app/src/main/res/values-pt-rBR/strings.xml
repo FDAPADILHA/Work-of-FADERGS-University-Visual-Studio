@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MDROID</string>
+    <string name="e_mail_home">E-mail:</string>
+    <string name="nome_de_usuario_home">Nome de usuário:</string>
+    <string name="insira_sua_senha_home">Insira sua senha:</string>
+    <string name="clique_aqui_home">Entrar</string>
+    <string name="switch_login_home">Manter conectado</string>
+    <string name="button_login_msg_error">Erro ao realizar o login por favor tente novamente</string>
+    <string name="Cadastrar_home">Cadastre-se aqui</string>
+</resources>
