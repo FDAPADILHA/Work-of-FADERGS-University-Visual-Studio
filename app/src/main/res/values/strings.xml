@@ -7,4 +7,9 @@
     <string name="switch_login_home">Keep connected</string>
     <string name="button_login_msg_error">Error login please try again</string>
     <string name="Cadastrar_home">Register here</string>
+    <string name="sucesso_login">Login success</string>
+    <string name="cadastre_sua_senha_home">Password</string>
+    <string name="cadastro_idd">Age</string>
+    <string name="cadastro_celular">Phone</string>
+    <string name="enviar">Enviar</string>
 </resources>

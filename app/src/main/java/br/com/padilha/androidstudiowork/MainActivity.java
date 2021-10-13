@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button butTextLogin;
     private EditText editTextNome;
     private UsuarioController usuarioController;
+    private Button butRegister;
     private EditText editTextEmail;
     private EditText editTextPass;
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         editTextEmail = findViewById(R.id.edit_text_email);
         editTextPass = findViewById(R.id.edit_text_password);
         butTextLogin = findViewById(R.id.but_text_login);
+        butRegister = findViewById(R.id.but_text_login2);
     }
 
     private void setButtonClick() {
@@ -46,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
                         editTextEmail.getText().toString(),
                         editTextPass.getText().toString()
                 )) {
-                    Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                    startActivity(intent);
+                    Toast.makeText(getApplicationContext(), R.string.sucesso_login, Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(getApplicationContext(), R.string.button_login_msg_error, Toast.LENGTH_LONG).show();
                 }
@@ -55,7 +56,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        butRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
 
     private void initDB() {
         Usuario usur = new Usuario(
