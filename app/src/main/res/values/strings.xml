@@ -12,4 +12,6 @@
     <string name="cadastro_idd">Age</string>
     <string name="cadastro_celular">Phone</string>
     <string name="enviar">Enviar</string>
+    <string name="cadastro_msg_preencher">Some fields have not been filled in yet</string>
+    <string name="cadastro_sucesso">Success to register</string>
 </resources>

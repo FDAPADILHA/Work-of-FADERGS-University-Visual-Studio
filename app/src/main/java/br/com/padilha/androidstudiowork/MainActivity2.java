@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.Random;
 
 import br.com.padilha.androidstudiowork.controller.UsuarioController;
 import br.com.padilha.androidstudiowork.model.Usuario;
@@ -36,23 +39,54 @@ public class MainActivity2 extends AppCompatActivity {
         enviar = findViewById(R.id.but_text_enviar);
     }
 
-    private void setClick(){
+    private void setClick() {
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UsuarioController usuarioController = new UsuarioController(getApplicationContext());
-                Usuario usur = new Usuario(
-                        1,
-                        nome.getText().toString(),
-                        Integer.parseInt(idade.getText().toString()),
-
-                        "filipe.amaral.padilha@gmail.com",
-                        "F123p-"
-                );
-                usuarioController.insert(usur);
+                if (!verification()){
+                    Toast.makeText(getApplicationContext(), R.string.cadastro_msg_preencher, Toast.LENGTH_LONG).show();
+                } else {
+                    UsuarioController usuarioController = new UsuarioController(getApplicationContext());
+                    Usuario usur = new Usuario(
+                            generatorId(),
+                            nome.getText().toString(),
+                            Integer.parseInt(idade.getText().toString()),
+                            celular.getText().toString(),
+                            email.getText().toString(),
+                            senha.getText().toString()
+                    );
+                    usuarioController.insert(usur);
+                    Toast.makeText(getApplicationContext(), R.string.cadastro_sucesso, Toast.LENGTH_LONG).show();
+                    finish();
+                }
             }
         });
 
+    }
+
+    private int generatorId() {
+        Random gerador = new Random();
+        return gerador.nextInt(500);
+
+    }
+
+    private boolean verification(){
+        if (nome.getText().length() == 0) {
+           return false;
+        }
+        if (email.getText().length() == 0) {
+            return false;
+        }
+        if (idade.getText().length() == 0) {
+            return false;
+        }
+        if (celular.getText().length() == 0) {
+            return false;
+        }
+        if (senha.getText().length() == 0) {
+            return false;
+        }
+        return true;
     }
 
 }

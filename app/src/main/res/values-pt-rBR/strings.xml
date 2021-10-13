@@ -12,4 +12,6 @@
     <string name="cadastro_idd">Idade</string>
     <string name="cadastro_celular">Celular</string>
     <string name="enviar">Enviar</string>
+    <string name="cadastro_msg_preencher">Alguns campos ainda não foram preenchidos</string>
+    <string name="cadastro_sucesso">Cadastro realizado com sucesso</string>
 </resources>
